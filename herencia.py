@@ -49,6 +49,7 @@ class Vegetarians(Animals):
 class Carnivores(Animals):
   def __init__(self, name, cientific_name, age, is_cute, height, type):
     super().__init__(name, cientific_name, age, is_cute, height, type, "Meat")
+    self.carnivore_type = None
 
   def get_food(self, type):
     if type == "HUNTING":
