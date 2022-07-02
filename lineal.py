@@ -6,11 +6,15 @@ import random
 
 def lineal_search(list, final_point):
   match = False # 1
+  counter = 1
 
   for item in list: # list O(n)
+    counter += 1
     if (item == final_point):
       match = True
       break
+
+  print(counter)
 
   return match
 
