@@ -2,21 +2,22 @@ import random
 
 
 def ordenamiento_de_burbuja(lista):
-  n = len(lista)
+  length = len(lista)
 
-  for i in range(n):
-    for j in range(0, n - i - 1): # O(n) * O(n) = O(n * n) = O(n**2)
-
-      if lista[j] > lista[j + 1]:
-        lista[j], lista[j + 1] = lista[j + 1], lista[j]
+  for item in range(length):
+    for item2 in range(0, length - item - 1):
+      if lista[item2] > lista[item2 + 1]: # change 8 > 2, then my 8 index will be my 2 index and both
+        lista[item2], lista[item2 + 1] = lista[item2 + 1], lista[item2] # intercambio
 
   return lista
 
+
 if __name__ == '__main__':
-  tamano_de_lista = int(input('De que tamano sera la lista? '))
+  tamano_de_lista = int(input('What size will be of list? '))
 
   lista = [random.randint(0, 100) for i in range(tamano_de_lista)]
   print(lista)
 
   lista_ordenada = ordenamiento_de_burbuja(lista)
   print(lista_ordenada)
+
