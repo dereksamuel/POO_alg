@@ -6,11 +6,13 @@ class Rectangle:
   def area(self):
     return self.base * self.height
 
+
 class Shape(Rectangle):
   def __init__(self, side):
     super().__init__(side, side)
 
     pass
+
 
 if __name__ == "__main__":
   rectangle = Rectangle(8, 3)
@@ -18,6 +20,7 @@ if __name__ == "__main__":
 
   shape = Shape(10)
   print(shape.area())
+
 
 # Here my challenge:
 
@@ -59,6 +62,7 @@ class Carnivores(Animals):
 
     return f"I am getting my sweet food {type}"
 
+
 if __name__ == "__main__":
   loro = Vegetarians(
     name="PericoJeje",
@@ -82,3 +86,4 @@ if __name__ == "__main__":
   print(lion.eating())
   print(lion.speaking())
   print(lion.get_food("HUNTING"))
+
